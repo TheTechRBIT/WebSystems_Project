@@ -1,0 +1,28 @@
+﻿@model CollectDemo.Models.Coach
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Coach Details</h2>
+
+<div>
+    <h4>
+        <img src="https://cdn0.iconfinder.com/data/icons/customicondesign-office6-shadow/256/baseball.png" height="30" width="30" />
+    </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Coach Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoachName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CoachID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

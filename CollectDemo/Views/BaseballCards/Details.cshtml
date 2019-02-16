@@ -1,0 +1,74 @@
+﻿@model CollectDemo.Models.BaseballCard
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Card Details</h2>
+
+<div>
+    <h4>
+        <img src="https://cdn0.iconfinder.com/data/icons/customicondesign-office6-shadow/256/baseball.png" height="30" width="30" />
+    </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Manufacturer Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ManufacturerInfo.ManufacturerName)
+        </dd>
+
+        <dt>
+            Card Year
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardYear)
+        </dd>
+
+        <dt>
+            Player Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Player.PlayerName)
+        </dd>
+
+        <dt>
+            Coach Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Coach.CoachName)
+        </dd>
+
+        <dt>
+            Card Number
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardNumber)
+        </dd>
+
+        <dt>
+            Player Number
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayerNumber)
+        </dd>
+        <dt>
+            Position Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Position.PositionName)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BaseballCardID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

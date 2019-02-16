@@ -1,0 +1,99 @@
+﻿@model IEnumerable<CollectDemo.Models.BaseballCard>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>
+    <img src="https://cdn0.iconfinder.com/data/icons/customicondesign-office6-shadow/256/baseball.png" height="30" width="30" />
+    Cards
+</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Manufacturer", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th>
+            @Html.ActionLink("Year", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th>
+            Card Number:
+        </th>
+        <th>
+            @Html.ActionLink("Team Name", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+
+        <th>
+            @Html.ActionLink("Player Name", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+
+        <th>
+            @Html.ActionLink("Coach Name", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th>
+            Player Number:
+        </th>
+        <th>
+            @Html.ActionLink("Position Name", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManufacturerInfo.ManufacturerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CardYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CardNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Team.TeamName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player.PlayerName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Coach.CoachName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlayerNumber)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Position.PositionName)
+            </td>
+
+
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.BaseballCardID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.BaseballCardID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.BaseballCardID }) |
+                @Html.ActionLink("Add", "Add", new { id = item.BaseballCardID })
+            </td>
+        </tr>
+
+    }
+
+
+</table>
