@@ -61,7 +61,7 @@ namespace CollectDemo
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
                 ClientId = "107169030391-p2cgb3bt79vpa0v3eooa92toukscn5pc.apps.googleusercontent.com",
-                ClientSecret = "gAq_kRn2moWuNdl0CA7v615v"
+                ClientSecret = "uWFuEF_rUxZCVxxVUZiPExCT"
             });
         }
     }
