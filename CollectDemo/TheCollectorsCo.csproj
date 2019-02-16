@@ -405,6 +405,7 @@
     <Content Include="Views\Positions\Edit.cshtml" />
     <Content Include="Views\Positions\Index.cshtml" />
     <Content Include="Views\BaseballCards\Add.cshtml" />
+    <Content Include="Views\google14430a1ae3446e99\Index.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
